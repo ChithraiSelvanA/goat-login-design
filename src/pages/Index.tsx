@@ -42,40 +42,40 @@ const Index = () => {
           <img src={logo} alt="The Meat Chop" className="w-20" />
         </div>
 
-        <div className="relative w-full max-w-md">
-          <h1 className="text-5xl font-bold italic text-primary mb-10">
+        <div className="relative w-full max-w-lg px-4">
+          <h1 className="text-6xl lg:text-7xl font-bold italic text-primary mb-8">
             Welcome
           </h1>
 
-          <form onSubmit={handleLogin} className="space-y-6">
-            <div>
-              <label className="text-sm font-medium text-primary bg-background px-2 relative -mb-3 ml-4 block w-fit z-10">
+          <form onSubmit={handleLogin} className="space-y-5">
+            <fieldset className="border-2 border-primary rounded-2xl px-5 pt-1 pb-4">
+              <legend className="text-base font-medium text-primary px-2">
                 Mobile
-              </label>
+              </legend>
               <input
                 type="tel"
                 value={mobile}
                 onChange={(e) => setMobile(e.target.value)}
-                className="w-full rounded-2xl border-2 border-primary bg-transparent px-5 py-4 text-foreground outline-none focus:ring-2 focus:ring-ring/30 placeholder:text-muted-foreground"
+                className="w-full bg-transparent text-foreground text-lg outline-none"
               />
-            </div>
+            </fieldset>
 
-            <div>
-              <label className="text-sm font-medium text-primary bg-background px-2 relative -mb-3 ml-4 block w-fit z-10">
+            <fieldset className="border-2 border-primary rounded-2xl px-5 pt-1 pb-4">
+              <legend className="text-base font-medium text-primary px-2">
                 Password
-              </label>
+              </legend>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-2xl border-2 border-primary bg-transparent px-5 py-4 text-foreground outline-none focus:ring-2 focus:ring-ring/30 placeholder:text-muted-foreground"
+                className="w-full bg-transparent text-foreground text-lg outline-none"
               />
-            </div>
+            </fieldset>
 
-            <div className="pt-2">
+            <div className="pt-4 flex justify-center">
               <button
                 type="submit"
-                className="w-52 bg-primary text-primary-foreground py-4 text-lg font-semibold hover:opacity-90 transition-opacity"
+                className="w-56 bg-primary text-primary-foreground py-4 text-xl font-semibold hover:opacity-90 transition-opacity"
               >
                 Login
               </button>
